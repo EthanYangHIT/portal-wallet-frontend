@@ -159,9 +159,6 @@
             <div class="row">
               <dao-card class="col" />
             </div>
-            <div class="row q-my-sm">
-              <shop-card class="col" />
-            </div>
           </q-tab-panel>
         </q-tab-panels>
       </q-card>
@@ -199,7 +196,6 @@
   import ReceiveCard from 'src/components/ReceiveCard.vue';
   import AssetCard from 'src/components/AssetCard.vue';
   import DaoCard from 'src/components/DaoCard.vue';
-  import ShopCard from 'src/components/ShopCard.vue';
   import { useSwap, useFiatRates } from '../compositions/swap';
   import {
     useFiatSymbol,
@@ -212,7 +208,7 @@
   export default Vue.extend({
     name: 'PageIndex',
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    components: { Jazzicon, ReceiveCard, AssetCard, DaoCard, ShopCard },
+    components: { Jazzicon, ReceiveCard, AssetCard, DaoCard },
     setup(props, { root }) {
       const locale = ref<string | undefined>();
       const showDrawer = ref(false);
